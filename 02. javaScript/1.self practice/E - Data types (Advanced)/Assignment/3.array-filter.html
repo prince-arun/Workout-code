@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Array method</title>
+    <title>Array Filter</title>
     <style>
       body {
         background-color: whitesmoke;
@@ -540,53 +540,93 @@
           rating: 3,
         },
       ];
-      function findElement() {
-        let findRating = superMarket.find((rate) => {
-          return rate.rating >= 3;
+      function filterElement() {
+        let filterRating = superMarket.filter((filterRate) => {
+          return filterRate.rating < 3;
         });
-        document.write(`<h2> The element with rating >= 3 </h2>`);
-        for (const key1 in findRating) {
-          document.write(`<b>${key1}</b>\t : ${findRating[key1]}<br>`);
-          // document.write(`<br>`);
-        }
-        document.write("<hr>");
-        let findVeg = superMarket.find((veg) => {
-          return veg.type === "vegetable";
+        document.write(`<h2> The Element with Rating below 3 </h2>`);
+        filterRating.forEach((rate) => {
+          document.write(
+            `---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------`
+          );
+          document.write(`<br>`);
+          for (const key1 in rate) {
+            document.write(`<b>${key1}</b>\t : ${rate[key1]}<br>`);
+          }
         });
-        document.write(`<h2> The element with type vegetable </h2>`);
-        for (const key2 in findVeg) {
-          document.write(`<b>${key2}</b>\t : ${findVeg[key2]}<br>`);
-          //document.write(`<br>`);
-        }
-        document.write("<hr>");
-        let findPrice = superMarket.find((dollar) => {
-          return dollar.price < 15;
+        document.write(`<hr>`);
+        let filterDairy = superMarket.filter((filterType) => {
+          return filterType.type === "dairy";
         });
-        document.write(`<h2> The element with price below 15 </h2>`);
-        for (const key3 in findPrice) {
-          document.write(`<b>${key3}</b>\t : ${findPrice[key3]}<br>`);
-          //document.write(`<br>`);
-        }
-        document.write("<hr>");
-        let findLemon = superMarket.find((lemon) => {
-          return lemon.title.includes("Lemon");
+        document.write(`<h2> The Element with Type Dairy </h2>`);
+        filterDairy.forEach((dairy) => {
+          document.write(
+            `//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////`
+          );
+          document.write(`<br>`);
+          for (const key2 in dairy) {
+            document.write(`<b>${key2}</b>\t : ${dairy[key2]}<br>`);
+          }
         });
-        document.write(`<h2> The element with title </h2>`);
-        for (const key4 in findLemon) {
-          document.write(`<b>${key4}</b>\t : ${findLemon[key4]}<br>`);
-          //document.write(`<br>`);
-        }
-        document.write("<hr>");
-        let findMeasure = superMarket.find((measurement) => {
-          return measurement.height == 450 && measurement.width == 450;
+        document.write(`<hr>`);
+        let filterPrice = superMarket.filter((filterDollar) => {
+          return filterDollar.price > 20;
         });
-        document.write(`<h2> The element with Height and Width </h2>`);
-        for (const key5 in findMeasure) {
-          document.write(`<b>${key5}</b>\t : ${findMeasure[key5]}<br>`);
-          //document.write(`<br>`);
-        }
+        document.write(`<h2> The Element with price above 20 </h2>`);
+        filterPrice.forEach((dollar) => {
+          document.write(
+            `**************************************************************************************************************************`
+          );
+          document.write(`<br>`);
+          for (const key3 in dollar) {
+            document.write(`<b>${key3}</b>\t : ${dollar[key3]}<br>`);
+          }
+        });
+        document.write(`<hr>`);
+        let filterTitle = superMarket.filter((filterSubstr) => {
+          return filterSubstr.title.includes("with");
+        });
+        document.write(`<h2> The Element with Title </h2>`);
+        filterTitle.forEach((title) => {
+          document.write(
+            `##########################################################################################################################`
+          );
+          document.write(`<br>`);
+          for (const key4 in title) {
+            document.write(`<b>${key4}</b>\t : ${title[key4]}<br>`);
+          }
+        });
+        document.write(`<hr>`);
+        let filterDescription = superMarket.filter((filterDes) => {
+          return filterDes.description.includes("with");
+        });
+        document.write(`<h2> The Element with Description </h2>`);
+        filterDescription.forEach((description) => {
+          document.write(
+            `^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^`
+          );
+          document.write(`<br>`);
+          for (const key5 in description) {
+            document.write(`<b>${key5}</b>\t : ${description[key5]}<br>`);
+          }
+        });
+        document.write(`<hr>`);
+        let filterMeasure = superMarket.filter((filterHandW) => {
+          return filterHandW.height == 600 && filterHandW.width == 400;
+        });
+        document.write(`<h2> The Element with Measurement </h2>`);
+        filterMeasure.forEach((measurement) => {
+          document.write(
+            `||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||`
+          );
+          document.write(`<br>`);
+          for (const key6 in measurement) {
+            document.write(`<b>${key6}</b>\t : ${measurement[key6]}<br>`);
+          }
+        });
       }
-      findElement();
+
+      filterElement();
     </script>
   </body>
 </html>
