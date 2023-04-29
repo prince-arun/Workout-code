@@ -113,6 +113,82 @@
       //to convert map into object
       let objTwo = Object.fromEntries(mapFour);
       console.log(objTwo);
+
+      console.log(
+        "=/=/=/=/==/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=//=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/"
+      );
+
+      //-----------------------------------------------------------------------------------------------
+      //set() and set() methods
+      //set() creates a unique values, which cannot be duplicated.
+      //syntax
+      // new Set() => to create a set()
+      // set.add(value) => to add value
+      // set.has(value) => to check whether the value is exist or not. if exist, its true, or false.
+      // set.delete(value) => delete values
+      // set.clear() => clear all the values from set
+      // set.size => outputs the size of set
+
+      let set1 = new Set();
+      set1.add("apple");
+      set1.add("orange");
+      set1.add("mango");
+      set1.add("apple");
+      console.log(set1); // => apple, orange , mango (does not takes duplicate values.)
+
+      //set.has(value)
+      console.log(set1.has("apple")); // => true.
+      console.log(set1.has("banana")); // => false
+
+      //set.size()
+      console.log(set1.size); // => size 3.
+
+      //set.delete(value)
+      console.log(set1.delete("mango")); // => does not outputs the deleted values.
+      console.log(set1); // => mango is deleted.
+
+      //set.clear()
+      set1.clear();
+      console.log(set1); // => size 0.
+
+      //declaring set via multi dimensional array.
+      let set2 = new Set([["one"], ["two"], ["three"], ["four"], ["five"]]);
+      console.log(set2);
+
+      let set3 = new Set([
+        { firstName: "elon" },
+        { secondName: "musk" },
+        { middleName: "reeve" },
+      ]);
+      console.log(set3);
+
+      // let set4 = new Set({
+      //   firstName: "arun",
+      //   secondName: "prince",
+      //   middleName: "nothing",
+      // });
+      // console.log(set4); // cannot be displayed, object is not iterable like arrays.
+
+      // iterables.
+      for (let set21 of set2) {
+        console.log(set21); //outputs the each arrays
+      }
+
+      for (let set22 of set2) {
+        console.log({ set22 }); // outputs arrays inside an object.
+      }
+
+      for (let set31 of set3) {
+        console.log(set31); // outputs as three objects.
+      }
+
+      console.log("\-\-\--\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--\-\-\-\-\-\-\-\-");
+
+      set3.forEach(([set32]) => {
+        for (let set321 in set32) {
+          console.log(set321);
+        }
+      }); // outputs the type error.
     </script>
   </body>
 </html>
