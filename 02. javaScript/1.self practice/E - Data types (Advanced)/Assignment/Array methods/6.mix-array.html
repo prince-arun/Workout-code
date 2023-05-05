@@ -595,6 +595,27 @@
       /*4. Filter the elements of type: ‘dairy’ and ‘vegetable’ and add new property ‘isAvailable: true’
        to the filtered elements under type: ‘dairy’ and add new property ‘isAvailable: false’ to the
        filtered elements under type: ‘vegetable’ */
+      let newArray = superMarket
+        .filter(
+          (newFilterdArray) =>
+            newFilterdArray.type === "dairy" ||
+            newFilterdArray.type === "vegetable"
+        )
+        .map((filteredArray) => {
+          if (filteredArray.type === "dairy") {
+            return {
+              ...filteredArray,
+              isAvailable: true,
+            };
+          } else {
+            return {
+              ...filteredArray,
+              isAvailable: false,
+            };
+          }
+        });
+      console.log(newArray);
+
       let addNewProperty = filterDairy.map((newDairy) => {
         return {
           ...newDairy,
