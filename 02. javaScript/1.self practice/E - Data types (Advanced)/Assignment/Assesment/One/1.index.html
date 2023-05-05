@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assesment - One</title>
+  </head>
+  <body>
+    <script>
+      // Create separate html document for the following exercises:
+      // 1. Display a message as ‘Welcome to JavaScript’ using alert(), console.log() and document.write().
+      function questionOne() {
+        alert("Welcome to javaScript");
+        console.log("Welcome to Javascript");
+        document.write("Welcome to Javascript");
+      }
+
+      // 3. Declare the following variables userId, firstName, lastName, password, email, gender, age(as variable constant), accountCreated (as variable constant) and assign the values and display the same as alert, in console and in html document.
+      function questionThree() {
+        let userId = 01;
+        alert(userId);
+        console.log(userId);
+        document.write(userId);
+        let firstName = "Arun";
+        alert(firstName);
+        console.log(firstName);
+        document.write(firstName);
+        let lastName = "prince";
+        alert(lastName);
+        console.log(lastName);
+        document.write(lastName);
+        let password = "123prince";
+        alert(password);
+        console.log(password);
+        document.write(password);
+        let email = "prince.skillsafari@gmail.com";
+        alert(email);
+        console.log(email);
+        document.write(email);
+        let gender = "male";
+        console.log(gender);
+        alert(gender);
+        document.write(gender);
+        const age = 24;
+        alert(age);
+        console.log(age);
+        document.write(age);
+        const accountCreated = true;
+        alert(accountCreated);
+        console.log(accountCreated);
+        document.write(accountCreated);
+      }
+
+      // 4. Create the variables for storing the product details with appropriate variable names and display the result in html document.
+      function questionFour() {
+        let productName = "Nokia";
+        let quantity = 50;
+        let type = "Electronics";
+        let rating = 4.5;
+        let description = "Nokia is mobile phones used to call";
+        let prince = 5094;
+        document.write(productName);
+        document.write(quantity);
+        document.write(type);
+        document.write(rating);
+        document.write(description);
+        document.write(prince);
+      }
+      // 5. Create a function named user() with properties userId, firstName, lastName, password, email gender, age, accountCreated. Call the function user() by passing the value for userId,firstName, lastName, password, email, gender, age, accountCreated as arguments and display the assigned value in console.{
+      function questionFive() {
+        function user(
+          userId,
+          firstName,
+          lastName,
+          password,
+          email,
+          gender,
+          age,
+          accountCreated
+        ) {
+          console.log(
+            `${userId}\n${firstName}\n${lastName}\n${password}\n${email}\n${gender}\n${age}\n${accountCreated}`
+          );
+        }
+        user(1, "Arun", "prince", 12345, "you@email.com", "male", 24, true);
+      }
+      // 6. Repeat the task mentioned in Question No. 5 using function expression.
+      function questionSix() {
+        let user = function (
+          userId,
+          firstName,
+          lastName,
+          password,
+          email,
+          gender,
+          age,
+          accountCreated
+        ) {
+          console.log(
+            `${userId}\n${firstName}\n${lastName}\n${password}\n${email}\n${gender}\n${age}\n${accountCreated}`
+          );
+        };
+        user(1, "Arun", "prince", 12345, "you@email.com", "male", 24, true);
+      }
+
+      // 7. Repeat the task mentioned in Question No. 5 using arrow function.
+      function questionSeven() {
+        let user = (
+          userId,
+          firstName,
+          lastName,
+          password,
+          email,
+          gender,
+          age,
+          accountCreated
+        ) => {
+          console.log(
+            `${userId}\n${firstName}\n${lastName}\n${password}\n${email}\n${gender}\n${age}\n${accountCreated}`
+          );
+        };
+        user(1, "Arun", "prince", 12345, "you@email.com", "male", 24, true);
+      }
+
+      // 8. Create an object named ‘user’ and do the following operations. a. Add the properties userId, firstName, lastName, password, country, continent and display all the property’s value. b. Delete the properties country, continent and display all the property’s value present in ‘user’ object. c. Display all the values present in ‘user’ object using for loop.
+      function questionEight() {
+        let user = {
+          userId: "01",
+          firstName: "Arun",
+          lastName: "prince",
+          password: 12345,
+          country: "India",
+          continent: "Asia",
+        };
+        console.log(user);
+        // console.log(
+        //   `${user.userId}\n${user.firstName}\n${user.lastName}\n${user.password}\n${user.country}\n${user.continent}`
+        // );
+        delete user.country;
+        delete user.continent;
+        console.log(user);
+
+        for (let key in user) {
+          console.log(`${key} : ${user[key]}`);
+        }
+      }
+
+      // 9. Add the methods such as displayAge() and displayAccountCreated() to the ‘user’ object created in Question No. 8 and alert the ‘age’ and ‘accountCreated’ property value.
+      function questionNine() {
+        let user = {
+          userId: "01",
+          firstName: "Arun",
+          lastName: "prince",
+          password: 12345,
+          country: "India",
+          continent: "Asia",
+          displayAge() {
+            user.age = 24;
+            console.log(user);
+            alert(`New property added ${user.age}`);
+          },
+          displayAccountCreated() {
+            user.accountCreated = true;
+            console.log(user);
+            alert(`New property added accountCreated : ${user.accountCreated}`);
+          },
+        };
+        user.displayAge();
+        user.displayAccountCreated();
+      }
+
+      // 10.Alert the ‘age’ and ‘accountCreated’ property value from ‘user’ object created in Question No.8 using ‘this’ from displayAge() and displayAccountCreated().
+      function questionTen() {
+        let user = {
+          userId: "01",
+          firstName: "Arun",
+          lastName: "prince",
+          password: 12345,
+          country: "India",
+          continent: "Asia",
+          displayAge() {
+            this.age = 24;
+            console.log(user);
+            alert(`New property added ${this.age}`);
+          },
+          displayAccountCreated() {
+            this.accountCreated = true;
+            console.log(user);
+            alert(`New property added accountCreated : ${this.accountCreated}`);
+          },
+        };
+        user.displayAge();
+        user.displayAccountCreated();
+      }
+
+      // 11.Create a constructor function named User() and assign the value for the following property’s at run time: userId, firstName, lastName, password, email, gender, age, accountCreated, displayAge(), displayAccountCreated() and display the value of age and accountCreated properties using displayAge() and displayAccountCreated() method. Create object’s for 5 users at run time using ‘new’ operator and call the constructor function User().
+      function User(
+        userId,
+        firstName,
+        lastName,
+        password,
+        email,
+        gender,
+        age,
+        accountCreated,
+        displayAge,
+        displayAccountCreated
+      ) {
+        return {
+          userId,
+          firstName,
+          lastName,
+          password,
+          email,
+          gender,
+          age,
+          accountCreated,
+          displayAge() {
+            console.log(`age : ${age}`);
+          },
+          displayAccountCreated() {
+            console.log(`accountCreated : ${accountCreated}`);
+          },
+        };
+      }
+      let john = new User(
+        01,
+        "John",
+        "Abraham",
+        12345,
+        "john@gmail.com",
+        "Male",
+        27,
+        true,
+        displayAge(),
+        displayAccountCreated()
+      );
+    </script>
+  </body>
+</html>
