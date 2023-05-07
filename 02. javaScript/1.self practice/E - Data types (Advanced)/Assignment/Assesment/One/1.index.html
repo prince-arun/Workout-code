@@ -203,24 +203,28 @@
         email,
         gender,
         age,
-        accountCreated,
-        displayAge,
-        displayAccountCreated
+        accountCreated
+        // displayAge,
+        // displayAccountCreated
       ) {
         return {
-          userId,
-          firstName,
-          lastName,
-          password,
-          email,
-          gender,
-          age,
-          accountCreated,
-          displayAge() {
-            console.log(`age : ${age}`);
+          userId: userId,
+          firstName: firstName,
+          lastName: lastName,
+          password: password,
+          email: email,
+          gender: gender,
+          age: age,
+          accountCreated: accountCreated,
+          displayAge: () => {
+            // console.log(`age : ${age}`);
+            // age;
+            return user.age;
           },
           displayAccountCreated() {
-            console.log(`accountCreated : ${accountCreated}`);
+            // console.log(`accountCreated : ${accountCreated}`);
+            // console.log(user.accountCreated);
+            return user.accountCreated;
           },
         };
       }
@@ -232,10 +236,13 @@
         "john@gmail.com",
         "Male",
         27,
-        true,
-        displayAge(),
-        displayAccountCreated()
+        true
+        // displayAge,
+        // displayAccountCreated
       );
+
+      console.log(john);
+      console.log(User.displayAge);
     </script>
   </body>
 </html>
