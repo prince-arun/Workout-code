@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Arun prince" />
+    <meta name="Description" content="HTML revision" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>HTML - Introduction</title>
+  </head>
+  <body>
+    <!-- Horizontal rule and Linebreaks -->
+    <h1>Hello, world</h1>
+    <hr />
+    <p>
+      Lorem ipsum dolor sit, amet consectetur <br />
+      adipisicing elit. Voluptatum repellat nemo blanditiis dolorem assumenda
+      explicabo. Quo ab <br />
+      reprehenderit dolorem voluptate minima vero sit distinctio praesentium
+      debitis. Eaque rem labore quod?
+    </p>
+
+    <!---------------------------------------------------------------------------------------------------->
+    <!-- Text Formatting  tags
+    1. Bold - <b>..</b> / <strong>...</strong> Ex: <b>Hello</b>
+    2. Italic - <i>...</i> / <em>...</em>
+    3. Underline - <u>...</u>
+    4. Strike-through - <s>...</s>
+    5. Subscript - <sub>...</sub>
+    6. Superscript - <sup>...</sup>
+    7. Delete and Insert - <del>...</del> / <ins>...</ins>
+    8. Highlight - <mark>...</mark>
+    9. Small - <small>...</small> -->
+
+    <b>bold</b>
+    <i>italic</i>
+    <u>Underline</u>
+    <s>strike - through</s>
+    <sub>Subscript</sub>
+    <sup>Superscript</sup>
+    <del>deleted,</del> <ins>inserted</ins>
+    <mark>Highlight</mark>
+    <small>small</small>
+
+    <!----------------------------------------------------------------------------------------------------------------------->
+    <!---------------------------Types of Lists---------------------------------->
+    <!-- Definition List -->
+    <dl>
+      <dt>this is Definition table</dt>
+      <dd>this is Definition data</dd>
+      <dt>second Definition table</dt>
+      <dd>second Definition data</dd>
+    </dl>
+
+    <!---Un Ordered list-->
+    <ul>
+      <li>list one</li>
+      <li>list two</li>
+      <li>list three</li>
+    </ul>
+
+    <!--Ordered list---->
+    <ol>
+      <li>list four</li>
+      <li>list five</li>
+      <li>list six</li>
+    </ol>
+
+    <!----Media tags--->
+    <audio controls autoplay muted loop>
+      <source src="audio source" type="audio / mp3" />
+    </audio>
+
+    <img src="image source here" alt="this is an image of empty" />
+
+    <video controls autoplay muted loop>
+      <source src="video source" type="video/mp4" />
+    </video>
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+    <!-- links and references -->
+    <a href="https://www.google.com/">this leads to google </a>
+    <a href="#">click here</a>
+
+    <div>
+      <a href="./second.html">Second page</a>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------->
+    <!-- Table -->
+    <table border="2" cellspacing="10px">
+      <thead>
+        <tr>
+          <th>col - one</th>
+          <th>col - two</th>
+          <th>col - three</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cell one one</td>
+          <td>cell one two</td>
+          <td>cell one three</td>
+        </tr>
+        <tr>
+          <td>cell two one</td>
+          <td>cell two two</td>
+          <td>cell two three</td>
+        </tr>
+        <tr>
+          <td>cell three one</td>
+          <td colspan="2">cell three two</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align: center">
+            this is the end of table
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <!-- -------iframe----------- -->
+    <iframe
+      src="https://www.google.com/"
+      frameborder="1"
+      width="300px"
+      height="300px"
+    ></iframe>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/NYSWn1ipbgg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
