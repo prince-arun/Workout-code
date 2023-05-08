@@ -85,26 +85,20 @@
 
       // 9. Write a function ‘addWithSurcharge’ that adds two amounts with surcharge. For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10, the surcharge is 2. Example: addWithSurcharge(5, 15) should return 23.
 
-      //   let digitOne = () => (digitOne <= 10 ? digitOne + 1 : digitOne + 2);
-      //   let digitTwo = () => (digitTwo <= 10 ? digitTwo + 1 : digitTwo + 2);
-
-      //   let addWithSurcharge = (digitOne, digitTwo) =>
-      //     console.log(digitOne + digitTwo);
-      let numOne = (value) => {
-        let result = value <= 10 ? value + 1 : value + 2;
-        console.log(result);
-        numOne();
-        addWithSurcharge(5);
+      //used resources to complete:
+      let addWithSurcharge = (amountOne, amountTwo) => {
+        let chargeOne = amountOne <= 10 ? 1 : 2;
+        let chargeTwo = amountTwo <= 10 ? 1 : 2;
+        let price = chargeOne + chargeTwo + amountOne + amountTwo;
+        console.log(price);
       };
-      // let addWithSurcharge = (numOne) => {
-      //   console.log(numOne + 1);
-      // };
+      addWithSurcharge(5, 15);
 
       // 10.Write a function ‘sumMultiples’ taking a natural number n and returning the sum of all multiples of 3 and of 5 that are truly less than n. Example: All multiples of 3 and 5 less than 20 are 3, 5, 6, 9, 10, 12, 15 and 18. Their sum is 78. sumMultiples(20) should return 78.
       let sumMultiples = (num) => {
         let array = [];
         for (let i = 1; i < num; i++) {
-          if (i % 3 && i % 5) continue;
+          if (i % 3 !== 0 && i % 5 !== 0) continue;
           array.push(i);
         }
         let calc = array.reduce((acc, item) => {
@@ -112,7 +106,7 @@
         }, 0);
         console.log(calc);
       };
-      //sumMultiples(20);
+      sumMultiples(20);
     </script>
   </body>
 </html>
