@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - selectors</title>
+  </head>
+  <body>
+    <h1>DOM - selectors</h1>
+    <hr />
+    <p id="paraOne">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores
+      minima consectetur cum ea et tempora. Illo recusandae quis iure mollitia!
+    </p>
+    <hr />
+    <ul>
+      <li class="lists">Orange</li>
+      <li class="lists">Apple</li>
+      <li class="lists">Mango</li>
+      <li class="lists">Pineapple</li>
+    </ul>
+
+    <hr />
+    <p id="paraTwo">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quia,
+      ratione quod autem accusamus quas vero ut. Officiis, optio corrupti.
+    </p>
+
+    <hr />
+    <div id="boxOne">
+      <ol>
+        <li>cars</li>
+        <li>bike</li>
+        <li>airplanes</li>
+        <li>helicopters</li>
+      </ol>
+    </div>
+    <script>
+      //DOM - Manipulation
+      //Dom tree
+      //DOM - elements (nodes)also called as Objects
+      //DOM Selectors
+      //1.document.getElementById()
+      //2.document.getElementsByClassName()
+      //3.document.getElementsByTagName()
+      //4.document.getElementsByName()
+
+      //----------------------------------------------------------------------------------
+      //1.document.getElementById()
+      let para = document.getElementById("paraTwo");
+      console.log(para);
+      console.log(para.textContent);
+
+      //2.document.getElementsByClassName()
+      let listItems = document.getElementsByClassName("lists");
+      console.log(listItems);
+      //To see the content of multiple items,we need to iterate
+      let newItems = Array.from(listItems).map((lists) => console.log(lists));
+
+      //3.document.getElementsByTagName()
+      let tagName = document.getElementsByTagName("h1");
+      console.log(tagName);
+      for (let tags of tagName) {
+        console.log(tags.textContent);
+      }
+      let newTags = Array.from(tagName).map((sTag) => console.log(sTag));
+
+      //document.querySelector()
+      //document.querySelectorAll()
+
+      let heading = document.querySelector("h1");
+      console.log(heading);
+      console.log(heading.textContent);
+
+      //document.querySelectorsAll()
+      let groupS = document.querySelectorAll("ul li");
+      console.log(groupS);
+    </script>
+  </body>
+</html>
