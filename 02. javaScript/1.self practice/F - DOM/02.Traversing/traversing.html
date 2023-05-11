@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversing through document</title>
+  </head>
+  <body>
+    <h2>Traversing</h2>
+    <ul id="list">
+      <li class="list-items">Home</li>
+      <li class="list-items">About</li>
+      <li class="list-items">Projects</li>
+      <li class="list-items">Awards</li>
+      <li class="list-items">Contact</li>
+    </ul>
+
+    <script>
+      //Traversing through Elements (nodes)
+      //1.Child to Parent
+      //parentNode
+      //2.Parent to Child
+      //1.firstElementChild
+      //2.lastElementChild
+      //3.Sibling
+      //1.nextElementSibling
+      //2.previousElementSibling
+
+      //1.Child to Parent
+      console.log(
+        "---------------------------Child to Parent----------------------------"
+      );
+      let navBar = document.querySelectorAll("li")[1];
+      console.log(navBar);
+      console.log(navBar.parentNode);
+
+      //2.Parent to child
+      console.log(
+        "---------------------------Parent to Child----------------------------"
+      );
+      let list = document.querySelector("ul");
+      console.log(list);
+      console.log(list.firstElementChild);
+      console.log(list.lastElementChild);
+
+      //3.Sibling
+      console.log(
+        "---------------------------Sibling----------------------------"
+      );
+      let h2 = document.querySelector("h2");
+      console.log(h2);
+      console.log(h2.nextElementSibling.innerHTML);
+
+      let fourthElement = document.querySelectorAll("li")[2].nextElementSibling;
+      console.log(fourthElement);
+      console.log(fourthElement.parentNode.previousElementSibling);
+      console.log(fourthElement.previousElementSibling);
+      console.log("-----------------------loop-------------------");
+
+      //loop
+      let firstChild = document.getElementById("list").firstElementChild;
+      console.log(firstChild);
+
+      while (firstChild) {
+        console.log(firstChild.innerHTML);
+        firstChild = firstChild.nextElementSibling;
+      }
+    </script>
+  </body>
+</html>
