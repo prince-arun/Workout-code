@@ -26,6 +26,23 @@
       // 5. working with styles.
       // 6. Events
       // 7. Working with form elements.
+
+      //-------------------------------------------------------------------------------------------------------------------------
+      //node types
+      // 1 represents an Element node.
+      // 2 represents an Attribute node.
+      // 3 represents a Text node.
+      // 8 represents a Comment node.
+      // 9 represents a Document node.
+      // 11 represents a Document Fragment node.
+
+      let h3 = document.createElement("h3");
+      console.log(h3.nodeType); // => 1, represent an Element node.
+      console.log(h3.nodeName); // h3
+      console.log(h3.nodeValue);
+
+      //getElementById() and querySelector() => returns an object with an element.
+      //getElementsByTagName() or querySelectorAll() => returns Node-lists.
     </script>
   </body>
 </html>

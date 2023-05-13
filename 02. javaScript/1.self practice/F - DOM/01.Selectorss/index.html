@@ -30,11 +30,15 @@
     <hr />
     <div id="boxOne">
       <ol>
-        <li>cars</li>
-        <li>bike</li>
-        <li>airplanes</li>
-        <li>helicopters</li>
+        <li class="lists">cars</li>
+        <li class="lists">bike</li>
+        <li class="not a lists">airplanes</li>
+        <li class="not a lists">helicopters</li>
       </ol>
+    </div>
+    <div>
+      <input type="radio" name="language" value="JavaScript" />
+      <input type="radio" name="language" value="TypeScript" />
     </div>
     <script>
       //DOM - Manipulation
@@ -53,7 +57,10 @@
       console.log(para.textContent);
 
       //2.document.getElementsByClassName()
-      let listItems = document.getElementsByClassName("lists");
+      let listItems = document.getElementsByClassName("lists", "not a lists");
+      for (let lt of listItems) {
+        console.log(lt.textContent);
+      }
       console.log(listItems);
       //To see the content of multiple items,we need to iterate
       let newItems = Array.from(listItems).map((lists) => console.log(lists));
@@ -76,6 +83,10 @@
       //document.querySelectorsAll()
       let groupS = document.querySelectorAll("ul li");
       console.log(groupS);
+
+      //document.getElementsByName()
+      let radio = document.getElementsByName("language");
+      console.log(radio);
     </script>
   </body>
 </html>
