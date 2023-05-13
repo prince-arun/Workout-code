@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <style>
+      #input {
+        padding: 5px 40px;
+      }
+      #btn {
+        padding: 5px 10px;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>To Do list</h2>
+      <input type="text" id="input" />
+      <button id="btn" onclick="addTask()">Add task</button>
+      <br />
+      <br />
+      <h3 id="task">Task list</h3>
+    </section>
+
+    <script>
+      function addTask() {
+        //getting value
+        let input = document.getElementById("input").value;
+
+        //creating checkbox
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = "taskList";
+        let label = document.createElement("label");
+        label.id = "label";
+
+        //adding value
+        label.innerHTML = input;
+        let h3 = document.querySelector("h3");
+        h3.appendChild(document.createElement("br"));
+        h3.appendChild(checkbox);
+        h3.appendChild(label);
+
+        let completedTask = document.createElement("h3");
+        completedTask.textContent = "Completed";
+        checkbox.addEventListener("change", () => {
+          label.style.textDecoration = "line-through";
+          h3.after(completedTask);
+          completedTask.appendChild(document.createElement("br"));
+          let completedLabel = label.cloneNode(true);
+          completedTask.appendChild(completedLabel);
+        });
+      }
+    </script>
+  </body>
+</html>
