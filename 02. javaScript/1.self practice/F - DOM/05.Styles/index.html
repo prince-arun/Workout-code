@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Styles</title>
+  </head>
+  <body>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod saepe
+        molestiae fugiat laborum reiciendis velit praesentium ipsam, fugit
+        numquam vero provident soluta quia nostrum nemo, dignissimos quaerat
+        placeat quas porro repellendus? Molestias voluptas sit quidem maiores
+        magnam, molestiae esse quo laudantium odio optio natus eum rem non atque
+        facilis cum!
+      </p>
+    </div>
+    <div id="div2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+        voluptas laudantium temporibus aliquam vel error suscipit ipsum corrupti
+        cupiditate reiciendis dolores ad rem eum delectus velit est, natus
+        quibusdam tempore sint perferendis repellat. Nisi numquam officiis rerum
+        eos veniam! Iste perspiciatis praesentium rerum fuga, corporis harum ad
+        itaque architecto explicabo laudantium in aut? Iusto possimus deleniti
+        dolores quo porro expedita, tenetur soluta dolorem. Architecto qui
+        numquam consectetur sed labore ipsum modi recusandae dolorum, et magnam
+        asperiores voluptatum rerum beatae veritatis eos pariatur atque at
+        delectus. Enim eveniet, dicta doloremque reiciendis cupiditate facilis
+        quae excepturi obcaecati temporibus corrupti soluta ipsam minus.
+      </p>
+    </div>
+
+    <script>
+      let div = document.querySelector("div");
+      div.style.color = "red";
+
+      div.setAttribute(
+        "style",
+        "color : red; background-color: yellow; font-size : 30px"
+      );
+
+      let div2 = document.querySelector("#div2");
+      div2.style.cssText =
+        "color: blue; background-color: grey; font-size : 30px";
+
+      css(div, { color: "white", [background - color]: "black" });
+    </script>
+  </body>
+</html>
