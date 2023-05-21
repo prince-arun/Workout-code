@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attributes</title>
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta cum
+      enim inventore vel facilis, perspiciatis aliquam tempore, sint laborum,
+      magni est? Aliquid, iusto aut?
+    </p>
+
+    <script>
+      let h1 = document.querySelector("h1");
+      console.log(h1);
+      let para = document.querySelector("p");
+      console.log(para);
+
+      h1.setAttribute("id", "heading");
+      console.log(h1.getAttribute("id"));
+
+      para.setAttribute("className", "para");
+      console.log(para.getAttribute("className"));
+
+      h1.removeAttribute("id");
+      console.log(h1.attributes);
+
+      console.log(para.hasAttribute("className"));
+    </script>
+  </body>
+</html>
