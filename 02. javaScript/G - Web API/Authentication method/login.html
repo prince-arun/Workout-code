@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login page</title>
+  </head>
+  <body>
+    <h1>login page</h1>
+    <form action="#" id="form">
+      <p>
+        <label for="email">Enter email</label><br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter email"
+        /><br />
+        <small id="sEmail"></small>
+      </p>
+      <p>
+        <label for="password">Password</label><br />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        /><br />
+        <small id="s1Password"></small>
+      </p>
+      <p>
+        <button id="submitBtn">log in</button>
+      </p>
+    </form>
+
+    <script>
+      let form = document.querySelector("form");
+      let btn = document.querySelector("#submitBtn");
+      let email = document.querySelector("#email");
+      let password = document.querySelector("#password");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        //retrieving information from
+        let regUser = localStorage.getItem(email.value);
+
+        if (regUser) {
+          let user = JSON.parse(regUser);
+          if (password.value === user.password) {
+            sessionStorage.setItem("currentUser", JSON.stringify(user));
+            if (email.value && password.value) {
+              window.location.href = "./profile.html";
+            }
+            return;
+          } else {
+            let s1Password = document.querySelector("#s1Password");
+            s1Password.innerHTML = `Invalid password`;
+            s1Password.style.color = "red";
+          }
+        } else {
+          let sEmail = document.querySelector("#sEmail");
+          sEmail.innerHTML = `Invalid email or password`;
+          sEmail.style.color = "red";
+        }
+
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
