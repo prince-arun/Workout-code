@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Forms</title>
+  </head>
+  <body>
+    <h1>A Simple Web forms</h1>
+    <form action="#">
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="first name"
+      />
+      <br />
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="last name"
+      />
+      <br />
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" placeholder="age" />
+      <br />
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="yourmail@email.com"
+      />
+      <br />
+      <label for="password">password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter your password"
+      />
+      <br />
+      <label>Gender</label><br />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" />
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" />
+      <label for="transgender">Transgender</label>
+      <input type="radio" name="gender" id="transgender" />
+      <label for="others">Others</label>
+      <input type="radio" name="gender" id="others" />
+      <br />
+      <label for="location">Location</label>
+      <select name="location" id="location">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+      </select>
+      <br />
+      <input type="checkbox" name="agreement" id="agreement" />
+      <label for="agreement">I agree the Terms and Conditions.</label>
+      <br />
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
