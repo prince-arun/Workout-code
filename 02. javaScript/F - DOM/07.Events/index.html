@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <h1>HTML - Events</h1>
+    <div style="margin-bottom: 50px"><button id="btn">Click here</button></div>
+
+    <!-- HTML EVENTS -->
+    <div style="margin-bottom: 50px">
+      <button onclick="alert('hello, html')">HTML EVENTS</button>
+    </div>
+
+    <!-- Level 0 Events -->
+    <div><button id="btn0">Level 0</button></div>
+
+    <script>
+      //Events
+      //A block of code, that manages events is event listeners or Event handler.
+      //an events object is added to the event.
+      //methods of Event objects.
+      //type, detail, preventDefault(), currentTarget, cancelable, target.
+      //Level 2 Event handlers
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", (e) => {
+        alert("You clicked the  button");
+        alert(e.type);
+        alert(e.detail);
+        alert(e.currentTarget);
+        alert(e.cancelable);
+      });
+
+      //HTML Event handlers.
+      //by specifying event methods in html element.
+      //it typically starts with on keyword.
+
+      //Level 0 Event handlers.
+      let btn0 = document.querySelector("#btn0");
+      btn0.onclick = function () {
+        alert("Level 0 Event");
+        alert(this.type);
+      };
+    </script>
+  </body>
+</html>
