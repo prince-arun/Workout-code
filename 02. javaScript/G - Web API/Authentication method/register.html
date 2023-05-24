@@ -27,7 +27,7 @@
       </p>
       <p>
         <label for="gender">Gender</label><br />
-        <label for="male">Male</label>
+
         <input
           class="gender"
           type="radio"
@@ -35,7 +35,8 @@
           id="male"
           value="male"
         />
-        <label for="female">Female</label>
+        <label for="male">Male</label>
+
         <input
           class="gender"
           type="radio"
@@ -43,14 +44,16 @@
           id="female"
           value="female"
         />
-        <label for="others">others</label>
+        <label for="female">Female</label>
+
         <input
           class="gender"
           type="radio"
           name="gender"
           id="others"
           value="others"
-        /><br />
+        />
+        <label for="others">others</label><br />
         <small id="sGender"></small>
       </p>
       <p>
@@ -207,7 +210,7 @@
         localStorage.setItem(email.value, JSON.stringify(user));
 
         //alert
-        if (email.value && password.value) {
+        if (email.value && password.value === cnfmPassword.value) {
           alert("Registration Successful, please log in");
           window.location.href = "./login.html";
         }
