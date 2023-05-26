@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <script>
+      //JSON - JavaScript Object Notation is data formate that is platform independent.
+      //JSON - Methods
+      //1.json.stringify()    => converts Objects into JSON.
+      //2.json.parse()        => converts JSON into Objects.
+
+      //example:
+      let obj1 = {
+        firstName: "arun",
+        lastName: "prince",
+        age: 23,
+        isRich: true,
+      };
+
+      let json1 = JSON.stringify(obj1);
+      console.log(json1); // => {"firstName":"arun","lastName":"prince","age":23,"isRich":true}
+      console.log(typeof json1); // => string
+
+      let obj2 = JSON.parse(json1);
+      console.log(obj2);
+    </script>
+  </body>
+</html>
