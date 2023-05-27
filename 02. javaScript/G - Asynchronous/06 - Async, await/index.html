@@ -1,0 +1,19 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async , await</title>
+  </head>
+  <body>
+    <script>
+      //Async, await
+      //example:
+      async function add(num1, num2) {
+        let result = await (num1 + num2); //here await pauses the add() function to resolve result function , once it's resolved it's value is passed into add function.
+        console.log(result);
+      }
+      add(1, 2);
+    </script>
+  </body>
+</html>
