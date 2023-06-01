@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style></style>
+    <style>
+      section {
+        margin: 100px;
+      }
+      img {
+        width: 300px;
+        height: 300px;
+      }
+      div {
+        margin-top: 100px;
+      }
+      span {
+        font-size: 40px;
+        font-weight: bold;
+      }
+      #translate img {
+        transform: translateX(70px);
+      }
+      #scale img {
+        transform: scaleX(1.5);
+        transform: scaleY(-1);
+      }
+      #skew img {
+        transform: skew(10deg, 10deg);
+      }
+      #rotate img {
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="translate">
+        <img src="./images/R.png" alt="translate" /> <span>Translate</span>
+      </div>
+      <div id="scale">
+        <img src="./images/R.png" alt="scale" /><span>scale</span>
+      </div>
+      <div id="skew">
+        <img src="./images/R.png" alt="skew" /><span>skew</span>
+      </div>
+      <div id="rotate">
+        <img src="./images/R.png" alt="rotate" /><span>rotate</span>
+      </div>
+    </section>
+  </body>
+</html>
