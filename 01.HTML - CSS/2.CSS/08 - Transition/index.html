@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Transition</title>
+    <style>
+      /*Syntax
+        selector{
+            transition : property duration timing-function delay;
+        } 
+        property : property of the element we want to transition.
+        duration : duration of the transition in seconds or milliseconds.
+        timing - function : ease (default), linear, ease-in, ease-out, ease-in-out.
+        delay : how much time needs to before the transition start.
+        */
+
+      button {
+        font-size: 30px;
+        font-weight: bold;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0.2s;
+      }
+      button:hover {
+        background-color: bisque;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Hover me!</button>
+    <div class="box"></div>
+  </body>
+</html>
