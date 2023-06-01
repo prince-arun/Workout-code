@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#sec-one {
+  height: 50vh;
+  width: 100vw;
+  background: url(./images/4022594.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#sec-two {
+  height: 50vh;
+  width: 100vw;
+  background: url(./images/4022617.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#sec-three {
+  height: 50vh;
+  width: 100vw;
+  background: linear-gradient(
+    45deg,
+    rgb(138, 199, 229),
+    rgb(238, 234, 29) /* url(./images/wallpaperflare.com_wallpaper\(2\).jpg) */
+  );
+  background-repeat: no-repeat;
+  background-size: contain;
+}
