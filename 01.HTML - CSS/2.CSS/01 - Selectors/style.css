@@ -1,0 +1,75 @@
+/* Css syntax */
+/* 
+selectors{
+    property : value;
+    property : value;
+}
+*/
+
+/* Selectors */
+/* 1.universal selectors */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2.Type selectors */
+div {
+  border: 2px solid black;
+}
+
+/* 3.Id selector */
+#head2 {
+  font-size: large;
+  text-align: center;
+}
+
+/* 4.Class selectors */
+.para {
+  color: wheat;
+  font-weight: bold;
+}
+
+/* 5.descendant selector */
+div h1 {
+  text-align: center;
+}
+
+/* 6.child selector */
+div > h2 {
+  color: aqua;
+}
+
+/* 7.General sibling selectors */
+h2 ~ p {
+  text-transform: uppercase;
+}
+
+/* 8.adjacent Sibling selectors */
+div + div {
+  margin-top: 50px;
+  padding: 50px;
+}
+
+/* 9.Attribute selector */
+input[type="text"] {
+  width: 150px;
+}
+
+/* 10.pseudo class */
+a:visited {
+  color: red;
+}
+h1:hover {
+  background: rgb(145, 116, 116);
+}
+
+/* 11.pseudo element */
+a::before {
+  content: "";
+  width: 50px;
+  display: block;
+  color: green;
+  border-top: 5px solid red;
+}
