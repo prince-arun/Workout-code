@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  margin: 100px;
+  border: 2px solid gray;
+  height: 50px;
+}
+#inline {
+  display: inline;
+  background-color: azure;
+}
+#block {
+  display: block;
+  background-color: beige;
+}
+#inline-block {
+  display: inline-block;
+  background-color: coral;
+}
+#none {
+  display: none;
+  background-color: rgb(4, 30, 87);
+}
