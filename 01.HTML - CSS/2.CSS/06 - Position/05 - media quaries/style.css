@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  margin: 100px;
+}
+.box {
+  width: 80vw;
+  height: 150px;
+  border: 2px solid black;
+  margin: 20px;
+}
+#one {
+  background-color: red;
+}
+#two {
+  background-color: rgb(0, 17, 255);
+}
+#three {
+  background-color: rgb(0, 255, 0);
+}
+#four {
+  background-color: rgb(238, 255, 0);
+}
+#five {
+  background-color: rgb(255, 0, 149);
+}
+#six {
+  background-color: rgb(0, 225, 255);
+}
+
+@media screen and (max-width: 300px) {
+  #one {
+    background-color: rgb(61, 60, 60);
+  }
+  #two {
+    background-color: rgb(73, 73, 75);
+  }
+  #three {
+    background-color: rgb(84, 87, 84);
+  }
+  #four {
+    background-color: rgb(76, 77, 75);
+  }
+  #five {
+    background-color: rgb(65, 63, 64);
+  }
+  #six {
+    background-color: rgb(74, 76, 77);
+  }
+}
+@media screen and (min-width: 301px) and (max-width: 599px) {
+  #one {
+    background-color: rgb(243, 39, 39);
+  }
+  #two {
+    background-color: rgb(250, 120, 68);
+  }
+  #three {
+    background-color: rgb(245, 164, 72);
+  }
+  #four {
+    background-color: rgb(243, 99, 62);
+  }
+  #five {
+    background-color: rgb(226, 92, 39);
+  }
+  #six {
+    background-color: rgb(230, 67, 27);
+  }
+}

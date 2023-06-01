@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position - fixed</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      nav {
+        height: 18vh;
+        width: 100vw;
+        background: wheat;
+        position: fixed;
+        z-index: 1;
+      }
+      #one {
+        height: 100vh;
+        width: 100vw;
+        background-color: gray;
+      }
+      #two {
+        height: 100vh;
+        width: 100vw;
+        background-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <nav></nav>
+    <section id="one"></section>
+    <section id="two"></section>
+  </body>
+</html>
