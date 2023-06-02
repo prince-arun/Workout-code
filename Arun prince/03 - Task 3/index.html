@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <form action="3">
+        <p>
+          <label for="age">Enter your Age</label>
+          <input type="number" name="age" id="age" />
+        </p>
+        <p>
+          <button id="btn">Verify</button>
+          <button type="reset">Clear</button>
+        </p>
+      </form>
+
+      <p id="para"></p>
+    </section>
+
+    <script>
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let age = document.querySelector("#age").value;
+        let result = +age;
+        let para = document.querySelector("#para");
+        if (result > 18) {
+          para.innerHTML = `You are an Adult`;
+        } else {
+          para.innerHTML = `You are minor`;
+        }
+      });
+    </script>
+  </body>
+</html>

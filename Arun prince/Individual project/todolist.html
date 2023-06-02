@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ToDoList</title>
+  </head>
+  <body>
+    <section>
+      <div id="box">
+        <h2>Todo List</h2>
+        <input type="text" id="input" placeholder="Enter the task" />
+        <button id="btn" onclick="addTask()">ADD TASK</button>
+        <br />
+        <br />
+        <div>
+          <h3 id="task">Task list</h3>
+        </div>
+
+        <br />
+        <h3 id="finished">Completed Task</h3>
+      </div>
+    </section>
+
+    <script>
+      //if clicking in same order, it will work... otherwise not.
+      function addTask() {
+        //getting value
+        let input = document.getElementById("input").value;
+
+        //creating checkbox
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = "taskList";
+        checkbox.style.backgroundColor = "red";
+        let label = document.createElement("label");
+        label.id = "label";
+        let btn = document.createElement("button");
+        btn.id = "newBtn";
+        btn.className = "deleteBtn";
+        btn.innerHTML = "Delete";
+
+        //adding value
+        label.innerHTML = input;
+        let h3 = document.getElementById("task");
+        console.log(h3.firstElementChild);
+        h3.appendChild(document.createElement("br"));
+        h3.append(checkbox);
+        h3.append(label);
+        h3.appendChild(btn);
+
+        let completedTask = document.getElementById("finished");
+        // completedTask.textContent = "Completed";
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) {
+            label.style.textDecoration = "line-through";
+            // h3.after(completedTask);
+            completedTask.appendChild(document.createElement("br"));
+            completedTask.appendChild(checkbox);
+            completedTask.appendChild(label);
+            completedTask.appendChild(btn);
+            // console.log(completedTask.firstElementChild);
+          } else {
+            h3.appendChild(document.createElement("br"));
+            label.style.textDecoration = "none";
+            h3.append(checkbox);
+            h3.append(label);
+            h3.append(btn);
+            // console.log(h3.firstChild.parentNode);
+            h3.removeChild(h3.firstElementChild);
+            completedTask.removeChild(completedTask.lastElementChild);
+          }
+
+          // checkbox.addEventListener("change", () => {
+          // });
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding the longest word</title>
+  </head>
+  <body>
+    <h1>Finding the length of the longest Name</h1>
+    <form action="#">
+      <p>
+        <label for="firstWord">First Name</label>
+        <input type="text" name="firstWord" id="firstWord" />
+      </p>
+      <p>
+        <label for="secondWord">Second Name</label>
+        <input type="text" name="secondWord" id="secondWord" />
+      </p>
+      <p>
+        <label for="thirdWord">Third Name</label>
+        <input type="text" name="thirdWord" id="thirdWord" />
+      </p>
+      <p>
+        <button type="submit" id="btn">Check</button>
+        <button type="reset">Reset</button>
+      </p>
+    </form>
+    <h2>Length of a longest name</h2>
+    <label for="length">Length : </label>
+    <label for="para" id="para"></label>
+
+    <script>
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let arr = [];
+        let firstWord = document.querySelector("#firstWord").value;
+        let secondWord = document.querySelector("#secondWord").value;
+        let thirdWord = document.querySelector("#thirdWord").value;
+        arr.push(firstWord.length);
+        arr.push(secondWord.length);
+        arr.push(thirdWord.length);
+        let result = Math.max(...arr);
+        let para = document.querySelector("#para");
+        para.innerHTML = result;
+      });
+    </script>
+  </body>
+</html>

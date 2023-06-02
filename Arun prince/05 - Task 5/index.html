@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome</title>
+  </head>
+  <body>
+    <form action="#">
+      <p>
+        <label for="word">Enter the word here</label>
+        <br />
+        <input type="text" name="word" id="word" />
+      </p>
+      <p>
+        <button type="submit" id="btn">Check</button>
+        <button type="reset">Clear</button>
+      </p>
+    </form>
+    <div>
+      <p id="para"></p>
+    </div>
+
+    <script>
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let word = document.querySelector("#word").value;
+        let para = document.querySelector("#para");
+        let result = word.split("");
+        console.log(result.at(-1));
+        if (result[0] === result.at(-1) || result.length === 0) {
+          if (result[1] === result.at(-2)) {
+            para.innerHTML = `Given word is a palindrome`;
+          }
+        } else {
+          para.innerHTML = `Given word is not a palindrome`;
+        }
+      });
+    </script>
+  </body>
+</html>
