@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common Elements</title>
+  </head>
+  <body>
+    <script>
+      let commonElements = (arrOne, arrTwo) => {
+        let setOne = new Set(arrOne);
+        let commonEle = arrTwo.filter((digit) => {
+          return setOne.has(digit);
+        });
+
+        return commonEle;
+      };
+      let commonEle = commonElements([1, 2, 3], [2, 3, 4]);
+
+      console.log(commonEle);
+    </script>
+  </body>
+</html>

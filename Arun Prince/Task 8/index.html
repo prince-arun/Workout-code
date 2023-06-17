@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Occurence Finder</title>
+  </head>
+  <body>
+    <script>
+      let finder = (array) => {
+        let repDigit = new Map();
+
+        array.forEach((digit) => {
+          if (repDigit.has(digit)) {
+            repDigit.set(digit, repDigit.get(digit) + 1);
+          } else {
+            repDigit.set(digit, 1);
+          }
+        });
+
+        return Object.fromEntries(repDigit);
+      };
+
+      let repDigit = finder([5, 6, 6, 7, 7, 7, 8, 8, 8, 8]);
+
+      console.log(repDigit);
+    </script>
+  </body>
+</html>
