@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rectangle</title>
+  </head>
+  <body>
+    <form action="#">
+      <p>
+        <label for="numOne">Length</label>
+        <input type="number" name="numOne" id="numOne" />
+      </p>
+
+      <p>
+        <label for="numTwo">width</label>
+        <input type="number" name="numTwo" id="numTwo" />
+      </p>
+      <p>
+        <button type="submit" id="btn">Calculate</button>
+      </p>
+    </form>
+    <h2>Area of a Rectangle</h2>
+    <p id="para"></p>
+    <script>
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let length = document.querySelector("#numOne").value;
+        let width = document.querySelector("#numTwo").value;
+        let result = +length * +width;
+        let para = document.querySelector("#para");
+        para.innerHTML = result;
+      });
+    </script>
+  </body>
+</html>
