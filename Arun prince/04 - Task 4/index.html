@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number verify</title>
+  </head>
+  <body>
+    <section>
+      <form action="3">
+        <p>
+          <label for="number">Enter a Number</label>
+          <input type="number" name="number" id="number" />
+        </p>
+        <p>
+          <button id="btn">Verify</button>
+          <button type="reset">Clear</button>
+        </p>
+      </form>
+
+      <p id="para"></p>
+    </section>
+
+    <script>
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let verify = document.querySelector("#number").value;
+        let result = +verify;
+        console.log(result);
+        let para = document.querySelector("#para");
+        if (result > 0) {
+          para.innerHTML = `Positive Number`;
+        } else if (result < 0) {
+          para.innerHTML = `Negative Number`;
+        } else {
+          para.innerHTML = `Zero`;
+        }
+      });
+    </script>
+  </body>
+</html>

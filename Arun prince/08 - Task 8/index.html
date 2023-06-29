@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Finding the Smallest Number</h1>
+    <form action="#">
+      <p>
+        <label for="firstNumber">First Number</label>
+        <input type="number" name="firstNumber" id="firstNumber" />
+      </p>
+      <p>
+        <label for="secondNumber">Second Number</label>
+        <input type="number" name="secondNumber" id="secondNumber" />
+      </p>
+      <p>
+        <label for="thirdNumber">Third Number</label>
+        <input type="number" name="thirdNumber" id="thirdNumber" />
+      </p>
+      <p>
+        <button type="submit" id="btn">Check</button>
+        <button type="reset">Reset</button>
+      </p>
+    </form>
+    <h2>Smallest Number</h2>
+    <label for="length">Smallest Number : </label>
+    <label for="para" id="para"></label>
+  </body>
+
+  <script>
+    let btn = document.querySelector("#btn");
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      let arr = [];
+      let firstNumber = document.querySelector("#firstNumber").value;
+      let secondNumber = document.querySelector("#secondNumber").value;
+      let thirdNumber = document.querySelector("#thirdNumber").value;
+      arr.push(firstNumber);
+      arr.push(secondNumber);
+      arr.push(thirdNumber);
+      let result = Math.min(...arr);
+      let para = document.querySelector("#para");
+      para.innerHTML = result;
+    });
+  </script>
+</html>

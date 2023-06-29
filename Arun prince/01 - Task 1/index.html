@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum - functions</title>
+  </head>
+  <body>
+    <section>
+      <h1>Sum of two numbers</h1>
+      <form action="#">
+        <p>
+          <label for="numOne">First Number</label>
+          <input type="number" name="numOne" id="numOne" />
+        </p>
+
+        <p>
+          <label for="numTwo">Second Number</label>
+          <input type="number" name="numTwo" id="numTwo" />
+        </p>
+        <p>
+          <button type="submit" id="btn">ADD</button>
+        </p>
+      </form>
+      <h2>Result</h2>
+
+      <p id="para"></p>
+
+      <script>
+        let btn = document.querySelector("#btn");
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          let numOne = document.querySelector("#numOne").value;
+          let numTwo = document.querySelector("#numTwo").value;
+          let result = +numOne + +numTwo;
+          let para = document.querySelector("#para");
+          para.innerHTML = result;
+        });
+      </script>
+    </section>
+  </body>
+</html>
