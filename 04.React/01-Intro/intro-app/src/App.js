@@ -38,6 +38,15 @@ function App() {
       <h2>{nm}</h2>
 
       <h2>{welcome("Nerd")}</h2>
+      <label htmlFor="search">Search : </label>
+      <input
+        type="text"
+        name="search "
+        id="search"
+        onChange={(event) => {
+          console.log(event.target.value);
+        }}
+      />
 
       {list.map((item) => {
         return (
