@@ -1,7 +1,10 @@
 import { UserId } from "../context/Context";
+import React, { useReducer } from "react";
 
 const Child = (props) => {
   const { cal, setCal } = UserId();
+  // const [state, setState] = useState('')
+  // const [state, dispatc] = useReducer(reducer, initalvalue);
 
   setCal(240);
   return (
