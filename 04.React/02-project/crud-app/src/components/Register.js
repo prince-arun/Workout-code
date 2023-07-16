@@ -41,20 +41,35 @@ const Register = () => {
   //Creating Auth information
   const handleRegister = async (e) => {
     e.preventDefault();
-    try {
-      const userCredentials = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      ).then((success) => {
-        const id = success.user.uid;
-        console.log(regUser);
-        set(ref(db, "RegUser/" + id), regUser);
-        alert("User Created Successfully  ");
-        navigate(`/signin/${id}`);
-      });
-    } catch (error) {
-      console.log(error.message);
+    if (
+      firstName !== "" &&
+      lastName !== "" &&
+      email !== "" &&
+      password !== "" &&
+      address !== "" &&
+      age !== "" &&
+      gender !== "" &&
+      states !== "" &&
+      zip !== "" &&
+      isChecked !== ""
+    ) {
+      try {
+        const userCredentials = await createUserWithEmailAndPassword(
+          auth,
+          email,
+          password
+        ).then((success) => {
+          const id = success.user.uid;
+          console.log(regUser);
+          set(ref(db, "RegUser/" + id), regUser);
+          alert("User Created Successfully  ");
+          navigate(`/signin/${id}`);
+        });
+      } catch (error) {
+        console.log(error.message);
+      }
+    } else {
+      alert("Please fill all the Details");
     }
   };
 
