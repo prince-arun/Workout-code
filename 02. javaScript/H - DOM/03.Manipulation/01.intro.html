@@ -4,38 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./intro.js" defer></script>
     <title>DOM - Manipulation intro</title>
   </head>
   <body>
     <h2>appendChild</h2>
     <ul id="list"></ul>
     <button id="btn">Click</button>
-
-    <script>
-      //Task
-      //when the button is clicked, list of items to be added to ul.
-      let listItems = ["Home", "About", "Projects", "Contact"];
-
-      //step
-      //we need to create list element.
-      //we need to separate the values in arrays.
-      //we need to add the value to li.
-      //when the button clicked , the li are to be added inside ul.
-
-      let uLIst = document.getElementById("list");
-
-      function addChileElement(items) {
-        let list = document.createElement("li");
-        list.innerHTML = items;
-        uLIst.appendChild(list);
-      }
-
-      let button = document.getElementById("btn");
-      button.addEventListener("click", () => {
-        listItems.forEach((newItem) => {
-          addChileElement(newItem);
-        });
-      });
-    </script>
   </body>
 </html>
