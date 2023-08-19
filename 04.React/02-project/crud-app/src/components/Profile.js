@@ -38,7 +38,7 @@ const Profile = () => {
                   Sign Out
                 </Button>{" "}
               </Link>
-              {/* <EditProfile id={id} /> */}
+
               <NewEdit id={id} />
             </Nav>
           </Navbar.Collapse>
