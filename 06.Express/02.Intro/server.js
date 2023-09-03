@@ -12,9 +12,9 @@ const app = express();
 // });
 
 //sending files
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname, "index.html"));
-// });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 
 app.get("/about(.html)?", (req, res) => {
   res.sendFile(path.join(__dirname, "about.html"));
@@ -41,7 +41,7 @@ const second = (req, res, next) => {
   next();
 };
 
-const third = (req, res) => {
+const third = (req, res, ne) => {
   console.log("third");
   res.send("Finished Routing");
 };
