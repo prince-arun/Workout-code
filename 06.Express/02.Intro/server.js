@@ -30,6 +30,23 @@ app.get("/intro", (req, res) => {
   res.redirect(301, "/about");
 });
 
+//handling routing
+const first = (req, res, next) => {
+  console.log("first");
+  next();
+};
+
+const second = (req, res, next) => {
+  console.log("second");
+  next();
+};
+
+const third = (req, res) => {
+  console.log("third");
+  res.send("Finished Routing");
+};
+
+app.get("/array", [first, second, third]);
 //managing errors
 app.all("*", (req, res) => {
   res.status(404).send(`<h1> Page Not found </h1>`);
