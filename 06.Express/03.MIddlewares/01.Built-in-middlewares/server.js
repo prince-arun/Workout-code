@@ -5,6 +5,13 @@ const PORT = 5000;
 
 const app = express();
 
+//Custom Middlewares
+//example : log events
+app.use((req, res, next) => {
+  console.log(` ${req.method}\t${req.path}  ${req.url}\t${req.headers.origin}`);
+  next();
+});
+
 //built in middleware
 app.use(express.static(path.join(__dirname, "./public")));
 app.use(express.urlencoded({ extended: false }));
