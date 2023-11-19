@@ -213,3 +213,52 @@ console.log(set);
 console.log(
   "******************************************************************************************"
 );
+
+//promises
+// pending - fullfiled or rejected (settled)
+//          if fullfilled - promise resolved
+//          if rejected - promise outputs error
+
+setTimeout(() => {
+  alert("hello world");
+}, 5000);
+
+let getData = async () => {
+  await fetch("https://fakestoreapi.com/users")
+    .then((res) => res.json())
+    .catch((err) => err);
+};
+
+getData();
+
+function gettingData() {
+  fetch("url")
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(res.status);
+      }
+      return res.json();
+    })
+    .then((data) => {
+      //process data
+    })
+    .catch((err) => console.log(err));
+}
+
+gettingData();
+
+let getAsyncData = async () => {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error(res.status);
+    }
+
+    const data = await res.json();
+    //process data
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+getAsyncData();
