@@ -45,3 +45,12 @@ console.log("==========================calc======================");
 const { add, sub, mul, div } = require("./data");
 
 console.log(add(34, 44));
+
+console.log(
+  "========================================================================================================"
+);
+
+console.log(__dirname);
+console.log(__filename);
+
+console.log(path.basename(__dirname));

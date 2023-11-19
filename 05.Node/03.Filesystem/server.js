@@ -46,7 +46,19 @@ for (let i = 0; i < 3; i++) {
 //========================================================================================//
 //catching errors
 
-process.on("uncaughtException", (err) => {
-  console.error(`There is an error : ${err}`);
-  process.exit(1);
-});
+// process.on("uncaughtException", (err) => {
+//   console.error(`There is an error : ${err}`);
+//   process.exit(1);
+// });
+
+console.log("=========================");
+fs.readFile(
+  path.join(__dirname, "A.file", "text.txt"),
+  "utf-8",
+  (err, data) => {
+    if (err) {
+      throw err;
+    }
+    console.log(data);
+  }
+);

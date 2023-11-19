@@ -89,3 +89,37 @@ let R;
 var cf = 67;
 R = cf / (2 * PI);
 console.log(R);
+
+// -------------------------------------------------------------------
+//Data types
+
+console.log("================================================================");
+let str = "hello";
+console.log(str, typeof str);
+let num = 1234;
+console.log(num, typeof num);
+num = 34.89;
+console.log(num, typeof num);
+num = Infinity;
+console.log(num, typeof num);
+num = -Infinity;
+console.log(num, typeof num);
+num = NaN;
+console.log(num, typeof num);
+let boo = true;
+console.log(boo, typeof boo);
+boo = false;
+console.log(boo, typeof boo);
+let bint = 112344444444748484999494848774774848493304494488n;
+console.log(bint, typeof bint);
+let nul = null;
+console.log(nul, typeof nul);
+let undef;
+console.log(undef, typeof undef);
+undef = undefined;
+console.log(undef, typeof undef);
+let symb = new Symbol("id");
+console.log(symb, typeof symb);
+console.log(
+  "=================================================================="
+);
