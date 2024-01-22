@@ -62,3 +62,21 @@ fs.readFile(
     console.log(data);
   }
 );
+
+fs.readFile(path.join(__dirname, "A.file", "new.txt"), "utf-8", (err, data) => {
+  if (err) {
+    throw err;
+  }
+  console.log(data);
+});
+
+fs.writeFile(
+  path.join(__dirname, "A.file", "B.file", "hello.txt"),
+  "hello world",
+  (err, data) => {
+    if (err) {
+      throw err;
+    }
+    console.log("write completed");
+  }
+);

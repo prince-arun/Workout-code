@@ -37,13 +37,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-const sr = http.createServer((req, res) => {
-  if (req.url === "/") {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.write(htmlFile);
-    res.end();
-  }
-});
 //Listining server
 server.listen(PORT, (err) => {
   if (err) {
@@ -53,10 +46,18 @@ server.listen(PORT, (err) => {
   }
 });
 
-server.listen(PORT, (err) => {
+const ser = http.createServer((req, res) => {
+  if (req.url === "/") {
+    res.writeHead(200, { "Content-Type": "Text/html" });
+    res.write(htmlFile);
+    res.end();
+  }
+});
+
+ser.listen(PORT, (err) => {
   if (err) {
-    console.log(err);
+    console.log(err.message);
   } else {
-    console.log("server is running successfully");
+    console.log("Server is running successfully");
   }
 });
